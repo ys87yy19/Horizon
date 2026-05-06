@@ -5,6 +5,9 @@ on:
     - cron: '0 0 * * *'  # Runs daily at 08:00 Asia/Shanghai
   workflow_dispatch:      # Allow manual trigger
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   daily-summary:
     runs-on: ubuntu-latest
